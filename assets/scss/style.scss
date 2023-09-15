@@ -1,0 +1,59 @@
+$transition: 0.15s ease;
+@mixin large {
+
+    @media only screen and(max-width: 1100px){
+        @content; 
+    }
+
+}
+@mixin s_910 {
+
+    @media only screen and(max-width: 920px){
+        @content; 
+    }
+
+}
+@mixin s_700 {
+
+    @media only screen and(max-width: 700px){
+        @content; 
+    }
+
+}
+@mixin s_500 {
+
+    @media only screen and(max-width: 500px){
+        @content; 
+    }
+
+}
+@mixin s_350 {
+
+    @media only screen and(max-width: 350px){
+        @content; 
+    }
+
+}
+@import "./components/header";
+@import "./components/hero";
+@import "./components/feedback";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   background: #F9EFFF;
+   font-family: 'Raleway-Medium', sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1400px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
