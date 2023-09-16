@@ -6,11 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/lib/swiper/swiper.min.css">
 </head>
 <body>
     <header class="header">
         <div class="header__inner">
-            <span class="header__logo"><img src="./assets/img/header/SuperQuiz_Logo.svg" alt=""></span>
+            <span class="logo"><img src="./assets/img/header/SuperQuiz_Logo.svg" alt=""></span>
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__list-item">
@@ -34,14 +35,14 @@
             </nav>
             <div class="header__box">
                 <a class="defaultBtn" href="">Связаться с нами</a>
-                <div class="header__social">
-                    <a href="" class="header__social-item">
+                <div class="header__social social">
+                    <a href="" class="social__item">
                         <img src="./assets/img/header/social1.svg" alt="">
                     </a>
-                    <a href="" class="header__social-item">
+                    <a href="" class="social__item">
                         <img src="./assets/img/header/social2.svg" alt="">
                     </a>
-                    <a href="" class="header__social-item">
+                    <a href="" class="social__item">
                         <img src="./assets/img/header/social3.svg" alt="">
                     </a>
                 </div>
@@ -68,28 +69,28 @@
                     <li class="burger-menu__sub-item"><a href="">Еще подпункт</a></li>
                     <li class="burger-menu__sub-item"><a href="">И еще один подпункт</a></li>
                 </ul>
-            <div class="header__box">
-                <a class="defaultBtn" href="">Связаться с нами</a>
-                <div class="header__social">
-                    <a href="" class="header__social-item">
-                        <img src="./assets/img/header/social1.svg" alt="">
-                    </a>
-                    <a href="" class="header__social-item">
-                        <img src="./assets/img/header/social2.svg" alt="">
-                    </a>
-                    <a href="" class="header__social-item">
-                        <img src="./assets/img/header/social3.svg" alt="">
-                    </a>
-                </div>
-            </div>
-               
             </li>
             <li class="burger-menu__item">
                 <a href="">Еще не главная</a>
             </li>
-
-            <a class="defaultBtn" type="button">Связаться с нами</a>
         </ul>
+        
+        <div class="social">
+            <div class="social__inner">
+                <a href="" class="social__item">
+                    <img src="./assets/img/header/social1.svg" alt="">
+                </a>
+                <a href="" class="social__item">
+                    <img src="./assets/img/header/social2.svg" alt="">
+                </a>
+                <a href="" class="social__item">
+                    <img src="./assets/img/header/social3.svg" alt="">
+                </a>
+            </div>
+            
+            <a class="defaultBtn burger-contactBtn">Связаться с нами</a>
+        </div>
+          
     </div>
     <main class="main">
         <section class="hero">
@@ -141,11 +142,162 @@
                 </div>
             </div>
         </section>
-        
 
+        <section class="quiz">
+            <div class="container">
+                <div class="quiz__inner">
+                    <div class="quiz__questions">
+                        <div class="quiz__questions-item">
+                            
+                        </div>
+                    </div>
+                    <div class="quiz-contents">
+                        <div class="quiz-contents-item">
 
-        <section class=""></section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review">
+            <div class="container">
+                <div class="review__inner">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="review__item swiper-slide">
+                                <div class="review__item-box">
+                                    <div class="review__avatar">
+                                        <img src="./assets/img/main/review/Andrey-avatar.svg" alt="">
+                                    </div>
+                                    <div class="review__content">
+                                        <h3 class="review__content-title">Андрей Пархимович</h3>
+                                        <p class="review__content-text"> В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__item swiper-slide">
+                                <div class="review__item-box">
+                                    <div class="review__avatar">
+                                        <img src="./assets/img/main/review/Timur-avatar.svg" alt="">
+                                    </div>
+                                    <div class="review__content">
+                                        <h3 class="review__content-title">Тимур Никитенко</h3>
+                                        <p class="review__content-text"> Господа, глубокий уровень погружения в значительной степени обусловливает важность глубокомысленных рассуждений.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__item swiper-slide">
+                                <div class="review__item-box">
+                                    <div class="review__avatar">
+                                        <img src="./assets/img/main/review/Artur-avatar.svg" alt="">
+                                    </div>
+                                    <div class="review__content">
+                                        <h3 class="review__content-title">Артур Усович</h3>
+                                        <p class="review__content-text">Задача организации, в особенности же убеждённость некоторых оппонентов предопределяет высокую востребованность благоприятных перспектив.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__item swiper-slide">
+                                <div class="review__item-box">
+                                    <div class="review__avatar">
+                                        <img src="./assets/img/main/review/Egor-avatar.svg" alt="">
+                                    </div>
+                                    <div class="review__content">
+                                        <h3 class="review__content-title">Егор Грей</h3>
+                                        <p class="review__content-text"> Разнообразный и богатый опыт говорит нам, что высокое качество позиционных исследований предопределяет высокую востребованность кластеризации усилий. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review__item swiper-slide">
+                                <div class="review__item-box">
+                                    <div class="review__avatar">
+                                        <img src="./assets/img/main/review/Timur-avatar.svg" alt="">
+                                    </div>
+                                    <div class="review__content">
+                                        <h3 class="review__content-title">Тимур Никитенко</h3>
+                                        <p class="review__content-text">Мне очень понравился тест.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 170 170" fill="none">
+                                <g filter="url(#filter0_d_256_190)">
+                                    <rect x="35" y="11" width="100" height="100" rx="32" fill="white"/>
+                                </g>
+                                <path d="M93 45L77 61L93 77" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                                <defs>
+                                    <filter id="filter0_d_256_190" x="0" y="0" width="170" height="170" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="24"/>
+                                    <feGaussianBlur stdDeviation="17.5"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.619608 0 0 0 0 0 0 0 0 0 1 0 0 0 0.3 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_256_190"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_256_190" result="shape"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 170 170" fill="none">
+                                <g filter="url(#filter0_d_256_193)">
+                                    <rect x="35" y="11" width="100" height="100" rx="32" fill="white"/>
+                                </g>
+                                <path d="M77 77L93 61L77 45" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                                <defs>
+                                    <filter id="filter0_d_256_193" x="0" y="0" width="170" height="170" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="24"/>
+                                    <feGaussianBlur stdDeviation="17.5"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.619608 0 0 0 0 0 0 0 0 0 1 0 0 0 0.3 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_256_193"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_256_193" result="shape"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
     </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__contact">
+                <div class="footer__contact-item">
+                    <h4 class="footer__contact-itemTitle">Телефон</h4>
+                    <a href="tel:+375123456789" class="footer__contact-itemContent">+375 12 345 67 89</a>
+                </div>
+                <div class="footer__contact-item">
+                    <h4 class="footer__contact-itemTitle">Email</h4>
+                    <a href="mailto:ourmail@gmail.com" class="footer__contact-itemContent">ourmail@gmail.com</a>
+                </div>
+            </div>
+            <div class="social footer__social">
+                <a href="#" class="social__item">
+                    <img src="./assets/img/footer/social1.svg" alt="">
+                </a>
+                <a href="#" class="social__item">
+                    <img src="./assets/img/footer/social2.svg" alt="">
+                </a>
+                <a href="#" class="social__item">
+                    <img src="./assets/img/footer/social3.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <span class="logo"><img src="./assets/img/footer/SuperQuiz_logo_footer.svg" alt=""></span>
+    </footer>
+
+    <script src="./assets/lib/swiper/swiper.min.js"></script>
+    <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/burger_menu.js" type="text/javascript"></script>
 </body>
 </html>

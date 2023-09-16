@@ -1,5 +1,13 @@
 $transition: 0.15s ease;
-@mixin large {
+
+@mixin s_1400 {
+
+    @media only screen and(max-width: 1410px){
+        @content; 
+    }
+
+}
+@mixin s_1100 {
 
     @media only screen and(max-width: 1100px){
         @content; 
@@ -37,7 +45,8 @@ $transition: 0.15s ease;
 @import "./components/header";
 @import "./components/hero";
 @import "./components/feedback";
-
+@import "./components/review";
+@import "./components/footer";
 *{
     margin: 0;
     padding: 0;
@@ -52,6 +61,7 @@ ul{
 a{
     text-decoration: none;
 }
+
 .container{
     max-width: 1400px;
     padding: 0 20px;

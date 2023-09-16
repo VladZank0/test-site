@@ -67,7 +67,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        @include large{
+        @include s_1100{
             font-size: 70px;
         }
         @include s_700{
@@ -86,7 +86,7 @@
         font-weight: 500;
         line-height: normal;
         max-width: 690px;
-        @include large{
+        @include s_1100{
             max-width: 500px;
         }
         @include s_700{
