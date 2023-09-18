@@ -1,6 +1,6 @@
 .hero{
     position: relative;
-    z-index: -1;
+    z-index: 0;
     border-radius: 0px 0px 32px 32px;
     background: #FFF;
     margin-bottom: 8px;
@@ -23,14 +23,8 @@
         @include s_500{
             width: 90px;
         }
-        // @include s_350{
-        //     width: 69px;
-        // }
     }
     img:nth-of-type(2){
-        // @include s_350{
-        //     width: 96px;
-        // }
        right: 0;
     }
     &__inner{
@@ -53,6 +47,11 @@
         max-width: 900px;
         row-gap: 32px;
         overflow: hidden;
+        a{
+            &:hover{
+                cursor: pointer !important;
+            }
+        }
         @include s_700{
             row-gap: 24px;
         }

@@ -1,0 +1,504 @@
+.quiz{
+    margin-bottom: 96px;
+
+    &-title{
+        @include s_1100{
+            font-size: 48px;
+        }
+        color: #000;
+        font-family: 'NeueMachina-Bold', sans-serif;
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        margin-bottom: 24px;
+    }
+    &-paragraph{
+        margin-bottom: 64px;
+        max-width: 700px;
+        color: #000;
+        font-family: 'Raleway-Medium', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &__questions{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        row-gap: 8px;
+        &-item{
+            display: none;
+            max-width: 320px;
+            padding: 10px 48px 10px 24px;
+            @include s_910{
+                border-radius: 20px 20px 20px 20px;
+            }
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            border-radius: 0px 8px 8px 0px;
+            background: #FFF;
+            -webkit-transition: $transition;
+            -o-transition: $transition;
+            transition: $transition;
+            @include s_910{
+                max-width: none;
+                width: 100%;
+                
+            }
+            &.shown{
+                display: block;
+            }
+            &.active{
+                *{
+                    color: white !important;
+                }
+                background-color: #000;
+            }
+            &.active:hover{
+                background-color: #000;
+            }
+            &:first-child{
+                border-radius: 0px 32px 8px 0px;
+                @include s_910{
+                    border-radius: 40px 40px 20px 20px;
+                }
+            }
+            &:last-child{
+                border-radius: 0px 8px 32px 0px;
+                @include s_910{
+                    border-radius: 20px 20px 20px 20px;
+                }
+            }
+            h3{
+                margin-bottom: 8px;
+                color: #000;
+                font-family: 'Raleway-Medium', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            p{
+                color: #000;
+                font-family: 'Raleway-Medium', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+            &:hover{
+                cursor: pointer;
+                background: #9E00FF;
+                -webkit-transition: $transition;
+                -o-transition: $transition;
+                transition: $transition;
+                *{
+                    color: white;
+                }
+            }
+        }
+    }
+    &__contents{
+
+        &-item{
+            display: none;
+            @include s_910{
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                row-gap: 20px;
+                -webkit-box-shadow: 0 7px 0px #E9C4FF,  0 14px 0px #F0D9FF;
+                        box-shadow: 0 7px 0px #E9C4FF,  0 14px 0px #F0D9FF;
+                 
+                border-radius:20px 20px 40px 40px;
+
+            }
+            -webkit-box-shadow: 0 -7px 0px #E9C4FF,  0 -14px 0px #F0D9FF;
+                    box-shadow: 0 -7px 0px #E9C4FF,  0 -14px 0px #F0D9FF;
+            border-radius: 32px;
+            background: #FFF;
+            padding: 48px 32px;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            max-width: 1110px;
+            &.active{
+                display: block;
+            }
+           img{
+                @include s_910{
+                    width: 200px;
+                }
+           }
+
+        }
+    }
+    &__prev-btn{
+        @include s_910{
+            font-size: 16px;
+         }
+        &:hover{
+            cursor: pointer;
+        }
+        padding: 12px 32px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        border-radius: 16px;
+        background: #ffffff;
+        border: none;
+        color: rgb(0, 0, 0);
+        font-family: 'Raleway-Medium', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border: 2px solid #000;
+    }
+    &__continue-btn{
+        @include s_910{
+            font-size: 16px;
+         }
+        &:hover{
+            cursor: pointer;
+        }
+        padding: 12px 32px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        border-radius: 16px;
+        background: #000;
+        border: none;
+        color: white;
+        font-family: 'Raleway-Medium', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__user-answer{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 920px;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        row-gap: 8px;
+        -webkit-column-gap: 8px;
+           -moz-column-gap: 8px;
+                column-gap: 8px;
+        margin-bottom: 64px;
+    }
+
+    .quiz-input{ // без & чтобы к инпуту в блоке quiz применить другие стили, отлич. от  инпута модального окна 
+        margin-bottom: 23px;
+    }
+    .quiz-select{
+        margin-bottom: 65px;
+    }
+}
+.quiz__inner{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    @include s_910{
+        align-items: unset;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+.quiz-checkbox{
+    @include s_910{
+       font-size: 16px;
+    }
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #000;
+    font-family: 'Raleway-Medium', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+   
+    label{
+        border-radius: 20px;
+        border: 2px solid #000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 8px 32px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-column-gap: 8px;
+           -moz-column-gap: 8px;
+                column-gap: 8px;
+        &:hover{
+            cursor: pointer;
+        }
+        span:first-child{
+            display: none;
+            background-color: #ffffff;
+            border-radius: 50%;
+            padding: 6px;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+        }
+    }
+    input{
+        display: none;
+    }
+    input:checked ~ label{
+        -webkit-transition: $transition;
+        -o-transition: $transition;
+        transition: $transition;
+        &:hover{
+            -webkit-transition: $transition;
+            -o-transition: $transition;
+            transition: $transition;
+            span:first-child{
+                background-color: #9E00FF;
+                svg path{
+                    fill: white;
+                    stroke: white;
+                }
+            }
+        }
+        span:first-child{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        background-color: #000;
+        color: white;
+    }
+    
+    &:hover label{
+        color: white;
+        background: #9E00FF;
+        -webkit-transition: $transition;
+        -o-transition: $transition;
+        transition: $transition;
+       
+    }
+   
+}
+.quiz-radio{
+    @include s_910{
+        font-size: 16px;
+     }
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid #000;
+    color: #000;
+    font-family: 'Raleway-Medium', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+   
+    label{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 8px 32px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-column-gap: 8px;
+           -moz-column-gap: 8px;
+                column-gap: 8px;
+        &:hover{
+            cursor: pointer;
+        }
+        span:first-child{
+            flex-shrink: 0;
+            background-color: #ffffff;
+            border-radius: 50%;
+            border: 2px solid #000;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    input{
+        display: none;
+    }
+    input:checked ~ label{
+        -webkit-transition: $transition;
+        -o-transition: $transition;
+        transition: $transition;
+        &:hover{
+            -webkit-transition: $transition;
+            -o-transition: $transition;
+            transition: $transition;
+            span:first-child{
+                background-color: #9E00FF;
+                svg path{
+                    fill: white;
+                    stroke: white;
+                }
+            }
+        }
+        span:first-child{
+            width: 18px;
+            height: 18px;
+            border: 5px solid #ffffff;
+            background-color: #000;
+
+        }
+        background-color: #000;
+        color: white;
+    }
+    
+    &:hover label{
+        color: white;
+        background: #9E00FF;
+        -webkit-transition: $transition;
+        -o-transition: $transition;
+        transition: $transition;
+       
+    }
+   
+}
+.quiz-input{
+    max-width: 700px;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    input{
+        @include s_910{
+            font-size: 24px;
+        }
+        width: 100%;
+        padding: 8px 0px;
+        border: none;
+        outline: none;
+        color: #000;
+        font-family: 'Raleway-Medium', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    
+}
+// .quiz-select{
+//   
+//     position: relative;
+//    
+//     }
+//     select{
+//         &:hover{
+//             cursor: pointer;
+//         }
+        
+//     }
+// }
+
+.jq-selectbox{
+    max-width: 295px;
+    width: 100% !important;
+    &::after{
+        content: url("../img/main/quiz/select-arrow.svg");
+        position: absolute;
+        top: 50%;
+        right: 18px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+    &__trigger{
+        display: none;
+    }
+    &__select{
+        display: flex !important;
+        align-items: center;
+        height: 47px !important;
+        background: white !important;
+        &:hover{
+            background: white !important;
+        }
+       
+        &-text{
+            width: 200px !important; 
+            line-height: 47px;
+        }
+        -webkit-appearance: none;
+            -moz-appearance: none;
+                appearance: none;
+        padding: 12px 25px !important;
+        box-sizing: border-box !important;
+        border-radius: 16px !important;
+        border: 2px solid #000 !important; 
+        color: #000 !important;
+        font-family: 'Raleway-Medium', sans-serif !important;
+        font-size: 20px !important;
+        font-style: normal;
+        font-weight: 500 !important;
+        
+        background-color: white !important;
+    }
+    &__dropdown{
+        top: 50px;
+        padding: 12px 25px !important;
+        border-radius: 16px !important;
+        border: 2px solid #000 !important;
+        background: #FFF !important;
+        color: #000;
+        font-family: 'Raleway-Medium', sans-serif !important;
+        font-size: 20px !important;
+        font-style: normal;
+        font-weight: 500 !important;
+        line-height: normal;
+        ul{
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+        }
+        li{
+            padding: 0 0 12px 0 !important;
+            background: white !important;
+            color: #000 !important;
+            text-overflow: ellipsis !important;
+            border-bottom: 2px solid black !important;
+            white-space: unset !important;
+            &:last-child{
+                border-bottom: none !important;
+                padding: 0 0 2 0 !important;
+            }
+        }
+        .selected{
+            background: white !important;
+            color: #000 !important;
+        }
+    }
+   
+   
+}
+ 

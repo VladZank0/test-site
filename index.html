@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/lib/swiper/swiper.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/lib/formStyler/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="./assets/lib/formStyler/jquery.formstyler.css">
+    <script src="./assets/lib/formStyler/jquery.formstyler.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -18,10 +22,10 @@
                         <a href="">Главная</a>
                     </li>
                     <li class="nav__list-item">
-                        <a href="">Квиз</a>
+                        <a href="#quiz">Квиз</a>
                     </li>
                     <li class="nav__list-item">
-                        <a href="">Отзывы</a>
+                        <a href="#review">Отзывы</a>
                     </li>
                 </ul>
                 <div class="dropdown">
@@ -34,7 +38,7 @@
                 </div>
             </nav>
             <div class="header__box">
-                <a class="defaultBtn" href="">Связаться с нами</a>
+                <span class="defaultBtn modal-btn">Связаться с нами</span>
                 <div class="header__social social">
                     <a href="" class="social__item">
                         <img src="./assets/img/header/social1.svg" alt="">
@@ -88,9 +92,90 @@
                 </a>
             </div>
             
-            <a class="defaultBtn burger-contactBtn">Связаться с нами</a>
+            <a class="defaultBtn burger-contactBtn modal-btn">Связаться с нами</a>
         </div>
           
+    </div>
+    <div class="modal">
+        <div class="modal__close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M1 25L25 1M25 25L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <form action="#">
+            <h1 class="modal__title quiz-title">Заполните контактные данные</h1>
+            <p class="modal__paragraph quiz-paragraph">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+            <div class="modal__input-wrapper">
+                <div class="quiz-input">
+                    <input type="text" placeholder="Ваше имя">
+                </div>
+                <div class="quiz-input">
+                    <input type="text" placeholder="Фамилия">
+                </div>
+            </div>
+            
+            <div class="quiz-input modal__comment-input">
+                <input type="text" placeholder="Ваш комментарий">
+                <div class="file-input">
+                    <label for="file-input"><span id="file-name">Приложить файлы</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12.33 12.15L9.85999 14.62C9.53435 14.9447 9.27599 15.3305 9.0997 15.7552C8.92341 16.1799 8.83266 16.6352 8.83266 17.095C8.83266 17.5549 8.92341 18.0102 9.0997 18.4349C9.27599 18.8596 9.53435 19.2454 9.85999 19.57C10.1847 19.8957 10.5704 20.154 10.9951 20.3303C11.4198 20.5066 11.8752 20.5974 12.335 20.5974C12.7948 20.5974 13.2502 20.5066 13.6749 20.3303C14.0996 20.154 14.4853 19.8957 14.81 19.57L18.7 15.68C20.0112 14.3663 20.7476 12.5861 20.7476 10.73C20.7476 8.87396 20.0112 7.09372 18.7 5.78003C17.3863 4.46884 15.6061 3.73242 13.75 3.73242C11.8939 3.73242 10.1137 4.46884 8.79999 5.78003L4.55999 10.02C2.21999 12.36 2.21999 16.16 4.55999 18.51" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </label>
+                    <input id="file-input" accept="image/png, image/jpeg" required type="file">
+                </div>
+            </div>
+    
+            <p class="modal__paragraph quiz-paragraph">Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+            <div class="modal__radio-wrapper">
+                <div class="quiz-radio">
+                    <input id="modal-radio-1" type="radio" name="radio">
+                    <label for="modal-radio-1">
+                        <span></span>
+                        <span>Не знаю</span>
+                    </label>
+                </div>
+                <div class="quiz-radio">
+                    <input id="modal-radio-2" type="radio" name="radio">
+                    <label for="modal-radio-2">
+                        <span></span>
+                        <span>Увидел это</span>
+                    </label>
+                </div>
+                <div class="quiz-radio">
+                    <input id="modal-radio-3" type="radio" name="radio">
+                    <label for="modal-radio-3">
+                        <span></span>
+                        <span>Вон то</span>
+                    </label>
+                </div>
+                <div class="quiz-radio">
+                    <input id="modal-radio-4" type="radio" name="radio">
+                    <label for="modal-radio-4">
+                        <span></span>
+                        <span>Вон то</span>
+                    </label>
+                </div>
+                <div class="quiz-radio">
+                    <input id="modal-radio-5" type="radio" name="radio">
+                    <label for="modal-radio-5">
+                        <span></span>
+                        <span>Увидел это</span>
+                    </label>
+                </div>
+                <div class="quiz-radio">
+                    <input id="modal-radio-6" type="radio" name="radio">
+                    <label for="modal-radio-6">
+                        <span></span>
+                        <span>Не знаю</span>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="defaultBtn modal__continue-btn">Продолжить</button>
+        </form>
+        
     </div>
     <main class="main">
         <section class="hero">
@@ -101,11 +186,12 @@
                     <div class="hero__content">
                         <h1 class="hero__title">Это Супер-квиз!</h1>
                         <p class="hero__description">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
-                        <a href="" class="defaultBtn">Пройти супер-квиз</a>
+                        <a href="#quiz" class="defaultBtn">Пройти супер-квиз</a>
                     </div>
                 </div>
             </div>
         </section>
+        
         <section class="feedback">
             <div class="container">
                 <div class="feedback__inner">
@@ -142,25 +228,192 @@
                 </div>
             </div>
         </section>
-
-        <section class="quiz">
+        
+        <section id="quiz" class="quiz">
             <div class="container">
                 <div class="quiz__inner">
                     <div class="quiz__questions">
-                        <div class="quiz__questions-item">
-                            
+                        <div data-content="#content-1" class="quiz__questions-item shown active">
+                            <h3>Какие виды тестов вам нравятся?</h3>
+                            <p>Кто я из вселенной Марвел, На словарный запас</p>
+                        </div>
+                        <div data-content="#content-2" class="quiz__questions-item">
+                            <h3>Вы любите проходить тесты?</h3>
+                            <p>Да, я прохожу все тесты</p>
+                        </div>
+                        <div data-content="#content-3" class="quiz__questions-item">
+                            <h3>Спасибо за ответы! Заполните форму ниже</h3>
+                            <p></p>
                         </div>
                     </div>
-                    <div class="quiz-contents">
-                        <div class="quiz-contents-item">
+                    <div class="quiz__contents">
+                        <div id = "content-1" class="quiz__contents-item active">
+                            <h1 class="quiz-title">Какие виды тестов вам нравятся?</h1>
+                            <p class="quiz-paragraph">Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг понимаешь, что пролетело полдня.</p>
+                            <div class="quiz__user-answer">
+                                <div class="quiz-checkbox">
+                                    <input id="checkbox-1" type="checkbox" name="1">
+                                    <label for="checkbox-1">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M1 11L11 1M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span>На темперамент</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-checkbox">
+                                    <input id="checkbox-2" type="checkbox" name="2">
+                                    <label for="checkbox-2">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M1 11L11 1M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span>Кто я из вселенной Марвел</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-checkbox">
+                                    <input id="checkbox-3" type="checkbox" name="3">
+                                    <label for="checkbox-3">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M1 11L11 1M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span>Увидел это</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-checkbox">
+                                    <input id="checkbox-4" type="checkbox" name="4">
+                                    <label for="checkbox-4">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M1 11L11 1M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span>Мое тотемное животное</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-checkbox">
+                                    <input id="checkbox-5" type="checkbox" name="5">
+                                    <label for="checkbox-5">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M1 11L11 1M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span>На IQ</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-checkbox">
+                                    <input id="checkbox-6" type="checkbox" name="6">
+                                    <label for="checkbox-6">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M1 11L11 1M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span>На словарный запас</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-checkbox">
+                                    <input id="checkbox-7" type="checkbox" name="7">
+                                    <label for="checkbox-7">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M1 11L11 1M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span>На логическое мышление</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-checkbox">
+                                    <input id="checkbox-8" type="checkbox" name="8">
+                                    <label for="checkbox-8">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                <path d="M1 11L11 1M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span>На уровень интеллекта</span>
+                                    </label>
+                                </div>
+                                
+                                   
+                                 
+                            </div>
+                            <div class="quiz__navigation">
+                                <button class="quiz__continue-btn" data-nextContent="#content-2" type="button">Продолжить</button>
+                            </div>
+                        </div>
+                        <div id = "content-2" class="quiz__contents-item">
+                            <h1 class="quiz-title">Вы любите проходить тесты?</h1>
+                            <p class="quiz-paragraph">Нам важно узнать насолько часто Вы проходите тесты.</p>
+                            <div class="quiz__user-answer">
+                                <div class="quiz-radio">
+                                    <input id="radio-1" type="radio" name="radio">
+                                    <label for="radio-1">
+                                        <span></span>
+                                        <span>Нет, я не никогда не прохожу тесты</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-radio">
+                                    <input id="radio-2" type="radio" name="radio">
+                                    <label for="radio-2">
+                                        <span></span>
+                                        <span>Да, я прохожу все тесты</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-radio">
+                                    <input id="radio-3" type="radio" name="radio">
+                                    <label for="radio-3">
+                                        <span></span>
+                                        <span>Заставляю себя проходить тесты</span>
+                                    </label>
+                                </div>
+                                <div class="quiz-radio">
+                                    <input id="radio-4" type="radio" name="radio">
+                                    <label for="radio-4">
+                                        <span></span>
+                                        <span>Не люблю проходить тесты, но иногда приходится</span>
+                                    </label>
+                                </div>
 
+                            </div>
+                            <div class="quiz__navigation">
+                                <button class="quiz__prev-btn" data-prevContent="#content-1" type="button">Назад</button>
+                                <button class="quiz__continue-btn" data-nextContent="#content-3" type="button">Продолжить</button>
+                            </div>
+                        </div>
+                        <div id = "content-3" class="quiz__contents-item ">
+                            <img src="./assets/img/main/quiz/emoji.svg" alt="">
+                            <h1 class="quiz-title">Спасибо за ответы! Заполните форму ниже</h1>
+                            <p class="quiz-paragraph">Ваше мнение важно для нас. Прикрепите фото с Вашей любимой картинкой и оставьте комментарий насколько понравился Вам тест.</p>
+                             
+                            <div class="quiz-input">
+                                <input type="text" placeholder="Ваше мнение сюда">
+                            </div>
+                            <div class="select quiz-select">
+                                <select name="quiz-select" id="quiz-select">
+                                    <option value="Очень понравился">Очень понравился</option>
+                                    <option value="Не понравился">Не понравился</option>
+                                    <option value="Пройду еще раз">Пройду еще раз</option>
+                                    <option value="Посоветую пройти всем">Посоветую пройти всем</option>
+                                </select>
+                            </div>
+                           
+                            <div class="quiz__navigation">
+                                <button class="quiz__prev-btn" data-prevContent="#content-2" type="button">Назад</button>
+                                <button class="quiz__continue-btn" type="button">Продолжить</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="review">
+        <section id='review' class="review">
             <div class="container">
                 <div class="review__inner">
                     <div class="swiper">
@@ -265,8 +518,6 @@
                 </div>
             </div>
         </section>
-
-    
     </main>
 
     <footer class="footer">
@@ -298,6 +549,11 @@
 
     <script src="./assets/lib/swiper/swiper.min.js"></script>
     <script src="./assets/js/slider.js"></script>
-    <script src="./assets/js/burger_menu.js" type="text/javascript"></script>
+    <script src="./assets/js/burger_menu.js"></script>
+    <script src="./assets/js/anchor.js"></script>
+    <script src="./assets/js/quiz.js"></script>
+    <script src="./assets/js/formStyler.js"></script>
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/file_input.js"></script>
 </body>
 </html>

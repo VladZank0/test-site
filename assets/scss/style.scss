@@ -1,5 +1,4 @@
 $transition: 0.15s ease;
-
 @mixin s_1400 {
 
     @media only screen and(max-width: 1410px){
@@ -45,8 +44,10 @@ $transition: 0.15s ease;
 @import "./components/header";
 @import "./components/hero";
 @import "./components/feedback";
+@import "./components/quiz.scss"; 
 @import "./components/review";
 @import "./components/footer";
+@import "./components/modal.scss";
 *{
     margin: 0;
     padding: 0;
@@ -54,6 +55,7 @@ $transition: 0.15s ease;
 body{
    background: #F9EFFF;
    font-family: 'Raleway-Medium', sans-serif;
+   overflow: auto;
 }
 ul{
     list-style-type: none;

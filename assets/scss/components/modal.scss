@@ -1,0 +1,122 @@
+.modal{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    max-width:  700px;
+    width: 100%;
+    border-radius: 32px;
+    background: #FFF;
+    color: #000;
+    font-family: 'NeueMachina-Bold', sans-serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 24px;
+    padding: 48px 32px;
+    box-sizing: border-box;
+    transform: translate(-50%, 0);
+    top: 100px;
+    left: 50%;
+    &__close-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        border-radius: 16px;
+        border: 2px solid #000;
+        background: #FFF;
+        width: 56px;
+        height: 56px;
+        transition: $transition;
+        &:hover{
+            transition: $transition;
+            cursor: pointer;
+            background: #9E00FF;
+            svg path{
+                stroke: white;
+            }
+        }
+    }
+    &.active{
+        display: block;
+    }
+    &__paragraph{
+        margin-bottom: 24px;
+    }
+    &__title{
+        margin-bottom: 64px !important;
+    }
+    &__input-wrapper{
+        display: flex;
+        column-gap: 24px;
+    }
+    &__radio-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        row-gap: 8px;
+        margin-bottom: 64px;
+    }
+    &__continue-btn{
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+    .quiz-input{
+        position: relative;
+    }
+    &__comment-input{
+        display: flex;
+        align-items: flex-end;
+        column-gap: 10px;
+        margin-top: 24px;
+        margin-bottom: 64px;
+    }
+    
+}
+.file-input{
+    input{
+        display: none;
+    }
+    label{
+        display: flex;
+        height: fit-content;
+        column-gap: 8px;
+        justify-content: space-between;
+        background-color: #000;
+        padding: 6px 8px;
+        box-sizing: border-box;
+        height: none;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        max-width: 250px;
+        text-overflow: ellipsis;
+        &:hover{
+            cursor: pointer;
+        }
+        span{
+            display: block;
+            white-space: nowrap;
+            color: #FFF;
+            text-align: center;
+            font-family: 'Raleway-Medium', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            height: 24px;
+            &:first-child{
+                text-align: left;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 180px;
+                @include s_500{
+                    display: none;
+                }
+            }
+        }
+    }
+}

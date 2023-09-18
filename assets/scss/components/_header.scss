@@ -10,6 +10,7 @@
     height: fit-content;
     font-size: 20px;
     &:hover{
+        cursor: pointer;
         transition: $transition;
         background-color: rgba(158, 0, 255, 1);
     }
@@ -19,10 +20,7 @@
     
 }
 .logo{
-       
     height: 33px;
-   
-
     img{
         height: 33px;
         
@@ -30,7 +28,8 @@
 }
 .header{ 
     background: rgba(255, 255, 255, 1);
-    
+    position: relative;
+    z-index: 1;
     .logo{
         @include s_1100{
             height: 24px;
@@ -243,7 +242,8 @@
     display: none;
     position: absolute;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: auto;
     background: #F9EFFF;
     padding: 20px;
     padding-top: 24px;
@@ -251,7 +251,10 @@
     align-items: center;
     flex-direction: column;
     row-gap: 80px;
-    z-index: 10;
+    z-index: 200;
+    @media  only screen and(min-width: 910px) {
+        display: none !important;
+    }
     &__list{
         display: flex;
         flex-direction: column;
@@ -281,7 +284,7 @@
     &__item{
         > a::after{
     
-            content: url("/assets/img/header/arrow.svg");
+            content: url("../img/header/arrow.svg");
             position: absolute;
             display:block;
             width: 12px;
@@ -328,4 +331,5 @@
     box-sizing: border-box;
     text-align: center;
     font-size: 20px;
+    margin-bottom: 80px;
 }
